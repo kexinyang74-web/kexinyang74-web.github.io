@@ -43,7 +43,7 @@ export default function Contact() {
         <p className="mb-8 text-neutral-400">有兴趣聊聊？欢迎通过以下任何一种方式找到我。</p>
       </Reveal>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2">
         {contactLinks.map((link, index) => (
           <Reveal key={link.id} delay={(index % 4) * 100} className="h-full">
             <a

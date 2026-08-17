@@ -24,16 +24,4 @@ export const contactLinks: ContactLink[] = [
     url: 'https://github.com/kexinyang74-web/',
     handle: '@kexinyang74-web',
   },
-  {
-    id: 'x',
-    label: 'X(Twitter)',
-    url: 'https://x.com/yourname',
-    handle: '@yourname',
-  },
-  {
-    id: 'zhihu',
-    label: '知乎',
-    url: 'https://www.zhihu.com/people/yourname',
-    handle: '@yourname',
-  },
 ]

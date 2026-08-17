@@ -18,41 +18,17 @@ export const projects: Project[] = [
   {
     id: 'fitness-meal-plan',
     title: '健身饮食计划',
-    description: '一个移动端友好的健身饮食计划生成器：输入身体数据和食物偏好，自动生成一周三餐计划，支持表格展示和 Excel 下载。网页版完全基于本地 Python 计算，不调用大模型，不消耗 token。',
+    description:
+      '一个移动端友好的健身饮食计划生成器：输入身体数据和食物偏好，自动生成一周三餐计划，支持表格展示和 Excel 下载。网页版完全基于本地 Python 计算，不调用大模型，不消耗 token。',
     techStack: ['React', 'TypeScript', 'Tailwind CSS'],
     link: 'https://github.com/kexinyang74-web/fitness-meal-plan',
   },
   {
-    id: 'weather-app',
-    title: '天气查询应用',
-    description: '输入城市名查询实时天气和未来三天预报，界面自动适配深色模式。',
-    techStack: ['React', 'Vite', '天气 API'],
-    link: 'https://github.com/yourname/weather-app',
-  },
-  {
-    id: 'dashboard',
-    title: '数据可视化仪表盘',
-    description: '把销售数据做成可交互的图表仪表盘，支持按时间和维度筛选。',
-    techStack: ['React', 'ECharts', 'TypeScript'],
-  },
-  {
-    id: 'personal-blog',
-    title: '个人博客',
-    description: '用 Markdown 写文章的静态博客，支持代码高亮和评论功能。',
-    techStack: ['VitePress', 'Markdown', 'Vercel'],
-    link: 'https://github.com/yourname/blog',
-  },
-  {
-    id: 'snake-game',
-    title: '贪吃蛇小游戏',
-    description: 'Canvas 实现的经典贪吃蛇，加了音效和本地排行榜。',
-    techStack: ['TypeScript', 'Canvas API'],
-  },
-  {
-    id: 'ai-chatbot',
-    title: 'AI 聊天助手',
-    description: '接入大模型 API 的对话框应用，支持流式回复和多轮历史记录。',
-    techStack: ['React', 'Node.js', 'OpenAI API'],
-    link: 'https://github.com/yourname/ai-chatbot',
+    id: 'portfolio',
+    title: '个人作品集网站',
+    description:
+      '你现在看到的这个网站：用 React + TypeScript + Tailwind CSS 构建，深色主题、移动端适配、滚动渐入动画，代码推送到 GitHub 后由 Vercel 自动部署上线。',
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+    link: 'https://portfolio-taupe-nu-70.vercel.app',
   },
 ]
