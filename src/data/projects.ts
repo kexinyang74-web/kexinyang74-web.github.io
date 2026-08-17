@@ -16,11 +16,11 @@ export interface Project {
 /** 项目列表：以后新增项目，在这里照抄一条即可 */
 export const projects: Project[] = [
   {
-    id: 'todo-app',
-    title: '智能待办清单',
-    description: '支持标签、优先级和本地存储的待办事项应用，数据保存在浏览器里，刷新不丢失。',
+    id: 'fitness-meal-plan',
+    title: '健身饮食计划',
+    description: '一个移动端友好的健身饮食计划生成器：输入身体数据和食物偏好，自动生成一周三餐计划，支持表格展示和 Excel 下载。网页版完全基于本地 Python 计算，不调用大模型，不消耗 token。',
     techStack: ['React', 'TypeScript', 'Tailwind CSS'],
-    link: 'https://github.com/yourname/todo-app',
+    link: 'https://github.com/kexinyang74-web/fitness-meal-plan',
   },
   {
     id: 'weather-app',
