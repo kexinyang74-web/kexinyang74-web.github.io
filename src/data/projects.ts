@@ -27,8 +27,8 @@ export const projects: Project[] = [
     id: 'portfolio',
     title: '个人作品集网站',
     description:
-      '你现在看到的这个网站：用 React + TypeScript + Tailwind CSS 构建，深色主题、移动端适配、滚动渐入动画，代码推送到 GitHub 后由 Vercel 自动部署上线。',
+      '你现在看到的这个网站：用 React + TypeScript + Tailwind CSS 构建，深色主题、移动端适配、滚动渐入动画，代码推送到 GitHub 后由 GitHub Actions 和 Vercel 自动构建部署上线。',
     techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
-    link: 'https://portfolio-taupe-nu-70.vercel.app',
+    link: 'https://kexinyang74-web.github.io',
   },
 ]

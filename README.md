@@ -99,9 +99,47 @@ npm run dev     # 启动开发服务器，浏览器打开 http://localhost:5173
 - 常见报错：漏逗号 / 漏引号（报错会标出哪一行）、字段名拼错（提示「只能指定已知属性」= 检查拼写）。
 - 报错不可怕：按提示行号找到位置，改到不报错为止。
 
-## 部署上线（简要）
+## 部署上线（当前状态）
 
-`npm run build` 产出 `dist/` 静态文件夹，托管到任意静态托管平台即可，Vite 项目推荐：
+网站同时部署在两个平台，**push 到 main 后都会自动更新**，不需要手动部署：
 
-- **Vercel / Netlify**：连接 GitHub 仓库后自动构建部署，最省事
-- **GitHub Pages**：免费，配合 `vite.config.ts` 里设置 `base` 使用
+| 平台 | 网址 | 给谁访问 |
+|---|---|---|
+| **GitHub Pages** ⭐ | https://kexinyang74-web.github.io | **国内 HR（简历上放这个）** |
+| Vercel | https://portfolio-taupe-nu-70.vercel.app | 海外访问（大陆需开代理才能看） |
+
+> 实测结论（2026-08）：`vercel.app` 大陆无法直连；`github.io` 目前国内可直连。免费平台的大陆可用性会随时间变化，**拿手机关掉 WiFi 和代理实测最准**。
+
+## CI/CD 自动部署
+
+CI/CD = 让机器替你干「检查 → 打包 → 发布」这三件重复劳动：
+
+| 缩写 | 含义 | 人话 |
+|---|---|---|
+| CI（持续集成） | Continuous Integration | 每次 push，机器自动构建检查，**构建失败就不部署** |
+| CD（持续部署） | Continuous Deployment | 检查通过后自动发布上线，不用手动上传任何文件 |
+
+本项目的部署管道配置在 [.github/workflows/deploy.yml](.github/workflows/deploy.yml)：
+
+```
+git push（到 main 分支）
+  ├─→ GitHub Actions：拉代码 → npm ci → npm run build → 发布到 GitHub Pages
+  └─→ Vercel：自动构建 → 发布到 vercel.app
+```
+
+看懂这份配置的几个关键点：
+
+- `on: push: branches: ['main']` —— **触发条件**：只有 main 分支更新才部署
+- `permissions` —— 给机器的**最小权限**：能读代码、能写 Pages，仅此而已
+- `npm ci` —— 按锁文件**精确**安装依赖，保证机器上的环境和本地一致（比 `npm install` 严格）
+- `needs: build` —— 构建和部署是**两道工序**，构建失败绝不部署半成品
+- 查看每次运行记录：GitHub 仓库页 → **Actions** 标签页，绿色 ✅ = 成功
+
+## 更新网站的完整流程
+
+```powershell
+git add .
+git commit -m "描述这次改了什么"
+git push
+# 然后等 1~2 分钟，GitHub Actions 和 Vercel 自动完成剩下的
+```
