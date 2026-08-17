@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* 自定义入场动画：注册后即可使用 animate-fade-up 工具类 */
+@theme {
+  --animate-fade-up: fade-up 0.8s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* 深色主题基础样式（对应 PRD 的设计要求） */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-neutral-950 text-neutral-100 antialiased;
+}
