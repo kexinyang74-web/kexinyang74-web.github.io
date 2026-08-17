@@ -31,7 +31,11 @@ function App() {
 
       <main className="mx-auto max-w-5xl px-4 pt-14">
         {/* 首页 Hero */}
-        <Hero name="YKIN" tagline="一句话简介：我是正在学习编程的小白，正在努力成为一名全栈工程师" />
+        <Hero
+          name="YKIN"
+          tagline="一句话简介：我是正在学习编程的小白，正在努力成为一名全栈工程师"
+          avatarUrl="/avatar.jpg"
+        />
 
         {/* 关于我 */}
         <About />
