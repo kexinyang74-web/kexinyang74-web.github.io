@@ -16,6 +16,14 @@ export interface Project {
 /** 项目列表：以后新增项目，在这里照抄一条即可 */
 export const projects: Project[] = [
   {
+    id: 'ai-career-portfolio',
+    title: '转行 AI 应用开发 · 6 个月学习操作系统',
+    description:
+      '一套持续更新的 AI 应用开发学习与实践记录：用 24 周执行计划、每日学习日志和进度看板组织学习，沉淀 Python 练习、AI 助手与 RAG 实践代码，通过 GitHub 展示学习过程与阶段成果。',
+    techStack: ['Python', 'AI 应用开发', 'RAG', 'Obsidian', 'Markdown'],
+    link: 'https://github.com/kexinyang74-web/ai-career-portfolio',
+  },
+  {
     id: 'fitness-meal-plan',
     title: '健身饮食计划',
     description:
