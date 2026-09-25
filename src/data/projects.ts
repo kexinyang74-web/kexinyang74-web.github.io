@@ -16,6 +16,14 @@ export interface Project {
 /** 项目列表：以后新增项目，在这里照抄一条即可 */
 export const projects: Project[] = [
   {
+    id: 'media-topic-assistant',
+    title: '灵感小记 · 自媒体创作工作台',
+    description:
+      '一个面向自媒体创作者的 AI 工作台，串联账号定位、素材管理、选题策划、图文与视频创作、制作排期、发布登记和数据复盘；支持稿件版本管理、SQLite 本地持久化及 Markdown/CSV 导出。',
+    techStack: ['Python', 'FastAPI', 'DeepSeek API', 'SQLite', 'pytest'],
+    link: 'https://github.com/kexinyang74-web/media-topic-assistant',
+  },
+  {
     id: 'pomodoro',
     title: '番茄钟',
     description:
