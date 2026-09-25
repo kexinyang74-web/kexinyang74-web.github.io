@@ -16,6 +16,14 @@ export interface Project {
 /** 项目列表：以后新增项目，在这里照抄一条即可 */
 export const projects: Project[] = [
   {
+    id: 'bilibili-rag-qa',
+    title: 'B站案例库 RAG 问答系统',
+    description:
+      '基于约10篇B站案例拆解笔记构建的RAG问答项目：使用LangChain与Chroma完成向量检索和来源展示，并通过30条固定评测对比Top-K参数，将自动引用命中率从90%提升至93%。',
+    techStack: ['Python', 'LangChain', 'Chroma', 'RAG', 'DeepSeek'],
+    link: 'https://kexinyang74-web.github.io/bilibili-rag-qa/',
+  },
+  {
     id: 'media-topic-assistant',
     title: '灵感小记 · 自媒体创作工作台',
     description:
