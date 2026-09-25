@@ -27,9 +27,9 @@ export const projects: Project[] = [
     id: 'media-topic-assistant',
     title: '灵感小记 · 自媒体创作工作台',
     description:
-      '一个面向自媒体创作者的 AI 工作台，串联账号定位、素材管理、选题策划、图文与视频创作、制作排期、发布登记和数据复盘；支持稿件版本管理、SQLite 本地持久化及 Markdown/CSV 导出。',
+      '基于FastAPI、SQLite与DeepSeek API构建本机创作工作台，将定位、素材、选题、稿件版本、制作排期与复盘串联，解决创作资料分散和上下文重复整理问题；覆盖8个助手、5种内容形式，并以75项后端自动化测试验证核心流程。',
     techStack: ['Python', 'FastAPI', 'DeepSeek API', 'SQLite', 'pytest'],
-    link: 'https://github.com/kexinyang74-web/media-topic-assistant',
+    link: 'https://kexinyang74-web.github.io/media-topic-assistant/',
   },
   {
     id: 'pomodoro',
