@@ -16,6 +16,14 @@ export interface Project {
 /** 项目列表：以后新增项目，在这里照抄一条即可 */
 export const projects: Project[] = [
   {
+    id: 'pomodoro',
+    title: '番茄钟',
+    description:
+      '一款极简的专注计时与任务管理工具：支持专注、短休和长休模式，可自定义阶段时长并关联当前任务；数据保存在浏览器本地，还可作为 PWA 安装到手机或桌面。',
+    techStack: ['Vue 3', 'Vite', 'PWA', 'localStorage'],
+    link: 'https://kexinyang74-web.github.io/pomodoro/',
+  },
+  {
     id: 'ai-career-portfolio',
     title: '转行 AI 应用开发 · 6 个月学习操作系统',
     description:
